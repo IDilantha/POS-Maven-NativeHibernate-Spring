@@ -1,9 +1,6 @@
 package business.custom.impl;
 
 import business.custom.CustomerBO;
-import business.exception.AlreadyExistsInOrderException;
-import dao.DAOFactory;
-import dao.DAOTypes;
 import dao.custom.CustomerDAO;
 import dao.custom.OrderDAO;
 import db.HibernateUtil;

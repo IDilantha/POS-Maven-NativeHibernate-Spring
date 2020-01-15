@@ -1,8 +1,6 @@
 package business.custom.impl;
 
 import business.custom.OrderBO;
-import dao.DAOFactory;
-import dao.DAOTypes;
 import dao.custom.*;
 import db.HibernateUtil;
 import dto.OrderDTO;
