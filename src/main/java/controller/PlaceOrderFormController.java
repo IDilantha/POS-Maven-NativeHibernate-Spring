@@ -1,7 +1,5 @@
 package controller;
 
-import business.BOFactory;
-import business.BOTypes;
 import business.custom.CustomerBO;
 import business.custom.ItemBO;
 import business.custom.OrderBO;

@@ -1,7 +1,5 @@
 package controller;
 
-import business.BOFactory;
-import business.BOTypes;
 import business.custom.OrderBO;
 import dto.OrderDTO2;
 import javafx.beans.value.ChangeListener;
