@@ -11,11 +11,13 @@ import entity.Item;
 import entity.Order;
 import entity.OrderDetail;
 import org.hibernate.Session;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+@Component
 public class OrderBOImpl implements OrderBO {
 
     private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER);

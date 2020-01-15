@@ -8,9 +8,12 @@ import dto.ItemDTO;
 import entity.Item;
 import javafx.scene.control.Alert;
 import org.hibernate.Session;
+import org.springframework.stereotype.Component;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ItemBOImpl implements ItemBO {
 
     private OrderDetailDAO orderDetailDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER_DETAIL);
