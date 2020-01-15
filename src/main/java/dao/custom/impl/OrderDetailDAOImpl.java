@@ -6,11 +6,13 @@ import dao.custom.OrderDetailDAO;
 import entity.OrderDetail;
 import entity.OrderDetailPK;
 import org.hibernate.query.NativeQuery;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class OrderDetailDAOImpl extends CrudDAOImpl<OrderDetail,OrderDetailPK> implements OrderDetailDAO {
 
     @Override

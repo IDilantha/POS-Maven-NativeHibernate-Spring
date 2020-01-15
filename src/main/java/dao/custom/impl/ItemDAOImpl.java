@@ -4,11 +4,13 @@ package dao.custom.impl;
 import dao.CrudDAOImpl;
 import dao.custom.ItemDAO;
 import entity.Item;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class ItemDAOImpl extends CrudDAOImpl<Item,String> implements ItemDAO {
 
     @Override

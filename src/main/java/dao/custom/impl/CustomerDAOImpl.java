@@ -3,11 +3,9 @@ package dao.custom.impl;
 import dao.CrudDAOImpl;
 import dao.custom.CustomerDAO;
 import entity.Customer;
+import org.springframework.stereotype.Component;
 
-import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.List;
-
+@Component
 public class CustomerDAOImpl extends CrudDAOImpl<Customer,String> implements CustomerDAO {
 
     @Override

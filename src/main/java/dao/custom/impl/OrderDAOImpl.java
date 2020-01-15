@@ -4,11 +4,13 @@ import dao.CrudDAOImpl;
 import dao.custom.OrderDAO;
 import entity.Order;
 import org.hibernate.query.NativeQuery;
+import org.springframework.stereotype.Component;
 
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class OrderDAOImpl extends CrudDAOImpl<Order,Integer> implements OrderDAO {
 
     @Override
