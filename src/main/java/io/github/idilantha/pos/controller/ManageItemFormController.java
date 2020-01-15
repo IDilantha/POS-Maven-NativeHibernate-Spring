@@ -1,5 +1,6 @@
 package io.github.idilantha.pos.controller;
 
+import io.github.idilantha.pos.AppInitializer;
 import io.github.idilantha.pos.business.custom.ItemBO;
 import io.github.idilantha.pos.business.exception.AlreadyExistsInOrderException;
 import com.jfoenix.controls.JFXTextField;
@@ -44,7 +45,7 @@ public class ManageItemFormController implements Initializable {
     @FXML
     private AnchorPane root;
 
-    private ItemBO itemBO = BOFactory.getInstance().getBO(BOTypes.ITEM);
+    private ItemBO itemBO = AppInitializer.ctx.getBean(ItemBO.class);
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

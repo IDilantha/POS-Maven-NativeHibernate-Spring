@@ -1,5 +1,7 @@
 package io.github.idilantha.pos.controller;
 
+import io.github.idilantha.pos.AppInitializer;
+import io.github.idilantha.pos.business.custom.CustomerBO;
 import io.github.idilantha.pos.business.custom.OrderBO;
 import io.github.idilantha.pos.dto.OrderDTO2;
 import javafx.beans.value.ChangeListener;
@@ -28,7 +30,7 @@ public class SearchOrdersFormController {
     public TextField txtSearch;
     public TableView<OrderTM> tblOrders;
     public AnchorPane root;
-    OrderBO orderBO = BOFactory.getInstance().getBO(BOTypes.ORDER);
+    OrderBO orderBO = AppInitializer.ctx.getBean(OrderBO.class);
 
     public void initialize() throws Exception {
 

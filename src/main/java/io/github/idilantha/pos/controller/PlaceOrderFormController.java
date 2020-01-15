@@ -1,5 +1,6 @@
 package io.github.idilantha.pos.controller;
 
+import io.github.idilantha.pos.AppInitializer;
 import io.github.idilantha.pos.business.custom.CustomerBO;
 import io.github.idilantha.pos.business.custom.ItemBO;
 import io.github.idilantha.pos.business.custom.OrderBO;
@@ -62,9 +63,9 @@ public class PlaceOrderFormController implements Initializable {
 
     private List<ItemDTO> tempItems = new ArrayList<>();
 
-    private CustomerBO customerBO = BOFactory.getInstance().getBO(BOTypes.CUSTOMER);
-    private ItemBO itemBO = BOFactory.getInstance().getBO(BOTypes.ITEM);
-    private OrderBO orderBO = BOFactory.getInstance().getBO(BOTypes.ORDER);
+    private CustomerBO customerBO = AppInitializer.ctx.getBean(CustomerBO.class);
+    private ItemBO itemBO = AppInitializer.ctx.getBean(ItemBO.class);
+    private OrderBO orderBO =AppInitializer.ctx.getBean(OrderBO.class);
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
