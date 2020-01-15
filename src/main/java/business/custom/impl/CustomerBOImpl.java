@@ -8,6 +8,7 @@ import dto.CustomerDTO;
 import entity.Customer;
 import javafx.scene.control.Alert;
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -16,8 +17,10 @@ import java.util.List;
 @Component
 public class CustomerBOImpl implements CustomerBO {
 
-    private CustomerDAO customerDAO = DAOFactory.getInstance().getDAO(DAOTypes.CUSTOMER);
-    private OrderDAO orderDAO = DAOFactory.getInstance().getDAO(DAOTypes.ORDER);
+    @Autowired
+    private CustomerDAO customerDAO;
+    @Autowired
+    private OrderDAO orderDAO;
 
     @Override
     public void saveCustomer(CustomerDTO customer) throws Exception {
